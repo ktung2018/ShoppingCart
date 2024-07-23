@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400;1,9..40,700&family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="/script.js"></script>
+    <script src="/snipcart.js"></script>
+    <script src="https://kit.fontawesome.com/8f6c33c48d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="py-2 px-4 bg-black text-white sticky top-0 z-10 flex">
+      <div>
+        <h1 class="text-2xl"><span class="italic">Target</h1>
+        <p class="text-slate-400">One Stop Shop</p>
+      </div>
+      <div class="ml-auto my-auto">
+        <button class="snipcart-checkout flex items-center relative">
+          <span class="snipcart-total-price text-sm">$0.00</span>
+          <i class="fa-solid fa-cart-shopping text-3xl p-2"></i>
+          <span
+            class="snipcart-items-count absolute top-0 right-0 bg-blue-500 block w-5 h-5 text-xs rounded-full leading-5"
+            >0</span
+          >
+        </button>
+      </div>
+      <div class="pl-4 my-auto">
+        <button class="snipcart-customer-signin pl-4 border-l border-l-white">
+          <i class="fa-solid fa-user text-3xl"></i>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <header
+        class="flex bg-[url('/assets/bg.jpg')] bg-cover h-[calc(100vh-72px)] min-h-[400px]"
+      >
+        <div class="m-auto text-center">
+          <h1
+            class="mb-8 drop-shadow-lg text-7xl underline text-red-600 decoration-red-600 underline-offset-8"
+          >
+            Target
+          </h1>
+          <p class="text-lg mb-8 drop-shadow-lg">Your One Stop Shop</p>
+          <button
+            id="btn-browse-collection"
+            class="bg-black text-white uppercase px-6 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors"
+          >
+            Browse the collection
+          </button>
+        </div>
+      </header>
+      <!-- PRODUCT 1 -->
+      <section
+        id="product-1"
+        class="product md:flex max-w-screen-xl mx-auto p-20 items-center gap-6"
+      >
+        <div class="md:min-w-[30%] md:max-w-[30%]">
+          <div id="item0"></div> 
+          <button id="test_button1" onclick="targetFetch1()">Add to cart!</button>
+          <div id="item1"></div>
+          <button id="test_button2" onclick="targetFetch2()">Add to cart!</button>
+          <script src="/api.js"></script>
+         <!---- <img src="/assets/1.jpeg" alt="TCL TV" /> -->
+          <div id="image0"></div>
+        </div>
+        <div class="flex-grow">
+           <h1 class="text-7xl">TCL Smart Google TV</h1>
+          <p class="mt-8">
+            TCL Q6 Q-Class Smart TVs combine premium picture technology with outstanding value 
+            for endless entertainment. QLED Quantum Dot technology and HDR PRO+ with Dolby Vision 
+            you can enjoy enhanced contrast, accurate colors and fine details utilizing all the 
+            most advanced HDR formats with Motion Rate 240 with MEMC frame insertion for exceptional 
+            motion clarity. TCL’s High Brightness+ Direct LED Backlight produces brighter images for 
+            an enhanced viewing experience for all your favorite movies and TV shows. Now featuring 
+            the TCL AIPQ Processor that optimizes each scene for an unrivaled cinematic experience. 
+            Beyond movies and TV shows, you can get in the game with Game Accelerator 120* together 
+            with Auto Game Mode for the lowest latency for a more responsive gameplay without lag, 
+            designed to keep you at the top of any leaderboard. Including Dolby Atmos, DTS Virtual:X, 
+            and a new Enhanced Dialogue Mode, TCL Q6 TVs provide a complete audio package. TCL Q Class 
+            Smart TVs: Compelling Color and Choice. </p>         
+          <p class="text-2xl mt-8">$349.99</p>
+          <label class="text-sm mt-8 inline-block">Quantity</label>
+          <div class="grid grid-cols-[100px_1fr] gap-8">
+            <input
+              class="quantity border border-black rounded-md text-center px-2"
+              type="number"
+              value="1"
+              min="1"
+            />
+            <button
+              data-item-id="tcl-tv"
+              data-item-price="349.99"
+              data-item-description="TCL Q6 Q-Class Smart TVs combine premium picture technology with 
+              outstanding value for endless entertainment. QLED Quantum Dot technology and HDR PRO+ with 
+              Dolby Vision you can enjoy enhanced contrast, accurate colors and fine details utilizing 
+              all the most advanced HDR formats with Motion Rate 240 with MEMC frame insertion for 
+              exceptional motion clarity."        
+              data-item-image="/assets/1.jpeg"
+              data-item-name="TCL TV"
+              data-item-url="/"
+              class="snipcart-add-item bg-black text-white uppercase px-6 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCT 2 -->
+      <section
+        class="product md:flex flex-row-reverse max-w-screen-xl mx-auto p-20 items-center gap-6"
+      >
+        <div class="md:min-w-[30%] md:max-w-[30%]">
+          <img src="https://target.scene7.com/is/image/Target/GUEST_5f3edf97-5ea0-4fcf-b3a8-3861a58a3f26" alt="apple-airpod" />
+        </div>
+        <div class="flex-grow">
+          <h1 class="text-7xl">Apple AirPods</h1>
+          <p class="mt-8">
+            AirPods deliver high-quality sound and voice-activated Siri¹ for 
+            an unparalleled wireless headphone experience. They’re ready to 
+            use with all of your devices. Put them in your ears and they connect 
+            immediately. Just like magic.
+          </p>
+          <p class="text-2xl mt-8">$49.99</p>
+          <label class="text-sm mt-8 inline-block">Quantity</label>
+          <div class="grid grid-cols-[100px_1fr] gap-8">
+            <input
+              class="quantity border border-black rounded-md text-center px-2"
+              type="number"
+              value="1"
+              min="1"
+            />
+            <button
+              data-item-id="apple-airpod"
+              data-item-price="49.99"
+              data-item-description="AirPods deliver high-quality sound and voice-activated Siri¹ 
+              for an unparalleled wireless headphone experience. They’re ready to use with all of 
+              your devices. Put them in your ears and they connect immediately. Just like magic."
+              data-item-image="https://target.scene7.com/is/image/Target/GUEST_5f3edf97-5ea0-4fcf-b3a8-3861a58a3f26"
+              data-item-name="Apple Airpod"
+              data-item-url="/"
+              class="snipcart-add-item bg-black text-white uppercase px-6 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCT 3 -->
+      <section
+        class="product md:flex max-w-screen-xl mx-auto p-20 items-center gap-6"
+      >
+        <div class="md:min-w-[30%] md:max-w-[30%]">
+          <img src="/assets/3.jpeg" alt="Ivory Icon" />
+        </div>
+        <div class="flex-grow">
+          <h1 class="text-7xl">Ivory Icon</h1>
+          <p class="mt-8">
+            Step into a world of unmatched sophistication with the "Ivory Icon."
+            This luxury leather bag, bathed in a radiant white hue, stands as a
+            symbol of timeless elegance and modern design. Crafted with
+            meticulous attention to detail, its supple leather texture and
+            gleaming gold accents set it apart in a league of its own. Beyond
+            its beauty, the Ivory Icon offers a harmonious blend of style and
+            utility, with compartments tailored for the needs of the
+            contemporary gentleman. Whether attending a gala or a boardroom
+            meeting, make a statement of refined taste and distinction with the
+            Ivory Icon. A true icon never fades; it only becomes more legendary.
+          </p>
+          <p class="text-2xl mt-8">$39.99</p>
+          <label class="text-sm mt-8 inline-block">Quantity</label>
+          <div class="grid grid-cols-[100px_1fr] gap-8">
+            <input
+              class="quantity border border-black rounded-md text-center px-2"
+              type="number"
+              value="1"
+              min="1"
+            />
+            <button
+              data-item-id="ivory-icon"
+              data-item-price="39.99"
+              data-item-description="Crafted with
+              meticulous attention to detail, its supple leather texture and
+              gleaming gold accents set it apart in a league of its own."
+              data-item-image="/assets/3.jpeg"
+              data-item-name="Ivory Icon"
+              data-item-url="/"
+              class="snipcart-add-item bg-black text-white uppercase px-6 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="text-white text-3xl p-20 bg-gradient-to-r from-slate-800 to-zinc-800"
+    >
+      <div class="flex justify-center gap-8">
+        <a href="https://facebook.com">
+          <i
+            class="fa-brands fa-facebook hover:text-blue-500 transition-colors"
+          ></i>
+        </a>
+        <a href="https://youtube.com">
+          <i
+            class="fa-brands fa-youtube hover:text-red-500 transition-colors"
+          ></i>
+        </a>
+        <a href="https://instagram.com">
+          <i
+            class="fa-brands fa-instagram hover:text-pink-500 transition-colors"
+          ></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
